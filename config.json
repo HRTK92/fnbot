@@ -1,0 +1,22 @@
+{
+    "email": "gugosike@fuwari.be",
+    "owner": "c8473a54b9184bff83cf1479b65d126c",
+    "password": "20032003es",
+    "avatar": {
+        "cid": "CID_028_Athena_Commando_F"
+    },
+    "cid": "CID_028_Athena_Commando_F",
+    "bid": "BID_023_Pinkbear",
+    "eid": "EID_HotPink",
+    "pickaxe_id": "Pickaxe_Lockjaw",
+    "banner": "BRWorldCup2019",
+    "banner_colour": "defaultcolor15",
+    "level": 999,
+    "bp_tier": 999999999,
+    "status": "🔥 fnbot 🔥",
+    "platform": "WIN",
+    "command_prefix": "!",
+    "debug": false,
+    "party_invite": true,
+    "friend_accept": true
+}
