@@ -10,3 +10,4 @@ from .setting import BotSettings
 from .bot import MyBot
 from .client import ClientCommands
 from .party import PartyCommands
+from .index import start
