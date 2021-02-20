@@ -41,7 +41,7 @@ class BotSettings:
 		self.party_invite = party_invite
 		self.friend_accept = friend_accept
 	async def load_settings_from_file(self) -> None:
-		async with aiofiles.open("config/config.json", mode='r+') as f:
+		async with aiofiles.open("config.json", mode='r+') as f:
 			raw = await f.read()
 		data = json.loads(raw)
 		self.email = data.get('email', self.email)
