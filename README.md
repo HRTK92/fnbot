@@ -2,7 +2,7 @@
 ***
 #install
 ```
-pip install git+https://github.com/HRTK92/fnbot/
+pip install git+https://github.com/HRTK92/fnbot-v2
 ```
 
 ```py
