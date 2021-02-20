@@ -25,24 +25,15 @@ except ModuleNotFoundError as e:
 	print(e, "\nfnbotの読み込みに失敗しました\n")
 	sys.exit()
 
-print(
-    fnbot.colors.green(f'\nPython {platform.python_version()}\n'
-                       f'fortnitepy {fortnitepy.__version__}\n'))
 
 
-async def start():
-	bot = fnbot.botnew
-	web = fnbot.web
-	c = input(f'{fnbot.setting.get_time()} ファイルの更新をしますか？\n[yes or no] : ')
-	if c == "yes":
-		print("更新を実行します\n")
-		updater = fnbot.auto_updater
-		updater.setup()
-		bot.setup()
-	else:
-		print("更新を実行しません\n")
-		setup()
 
+def start():
+	print(fnbot.colors.green(
+		f'\nPython {platform.python_version()}\n'
+		f'fortnitepy {fortnitepy.__version__}\n'))
+	loop = asyncio.get_event_loop()
+	loop.run_until_complete(main())
 
 async def main() -> None:
   settings = fnbot.BotSettings()
@@ -51,7 +42,3 @@ async def main() -> None:
   client.add_cog(fnbot.ClientCommands(client))
   client.add_cog(fnbot.PartyCommands(client))
   await client.start()
-
-
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main())
