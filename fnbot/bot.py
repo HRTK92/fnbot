@@ -16,8 +16,8 @@ from .setting import get_time
 from .setting import BotSettings
 from .client import ClientCommands
 
-email = "gugosike@fuwari.be"
-filename = 'config/device_auths.json'
+
+filename = 'device_auths.json'
 
 
 class MyBot(commands.Bot):
