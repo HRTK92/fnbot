@@ -22,8 +22,8 @@ filename = 'device_auths.json'
 
 class MyBot(commands.Bot):
 	def __init__(self, settings: BotSettings) -> None:
-		device_auth_details = self.get_device_auth_details().get(email, {})
 		self.settings = settings
+		device_auth_details = self.get_device_auth_details().get(self.settings.email, {})
 		super().__init__(
 		    command_prefix='!',
 		    status=self.settings.status,
