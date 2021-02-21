@@ -17,8 +17,6 @@ from .setting import BotSettings
 from .client import ClientCommands
 
 
-filename = 'device_auths.json'
-
 
 class MyBot(commands.Bot):
 	def __init__(self, settings: BotSettings) -> None:
@@ -41,6 +39,7 @@ class MyBot(commands.Bot):
 		self.message = f'[PartyBot] {get_time()} %s'
 
 	def get_device_auth_details(self):
+		filename = 'device_auths.json'
 		if os.path.isfile(filename):
 			with open(filename, 'r') as fp:
 				return json.load(fp)
@@ -115,7 +114,7 @@ class MyBot(commands.Bot):
 		    f'{get_time()} [{self.user.display_name}]｜{member.display_name}がパーティーに参加\n人数:{party.member_count}'
 		)
 		await party.send(f'(≧▽≦)')
-		await BenBotAsync.set_default_loadout(self, self.settings.to_dict(),member)
+		#await BenBotAsync.set_default_loadout(self, self.settings.to_dict(),member)
 		if party.member_count > 1:
 			member = self.party.me
 			await member.set_ready(fortnitepy.ReadyState.SITTING_OUT)
