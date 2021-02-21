@@ -10,6 +10,7 @@ import requests
 import logging
 import json
 import time
+import asyncio
 
 from .colors import blue, green, magenta, yellow, red
 from .setting import get_time
@@ -20,7 +21,7 @@ from . import web
 
 
 class MyBot(commands.Bot):
-	def __init__(self, settings: BotSettings) -> None:
+	def __init__(self, settings: BotSettings, loop: asyncio.AbstractEventLoop) -> None:
 		self.settings = settings
 		device_auth_details = self.get_device_auth_details().get(self.settings.email, {})
 		super().__init__(
