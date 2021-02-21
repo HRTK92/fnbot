@@ -26,7 +26,7 @@ class MyBot(commands.Bot):
 		loop=loop
 		device_auth_details = self.get_device_auth_details().get(self.settings.email, {})
 		super().__init__(
-			  loop=self.loop
+	      loop=self.loop,
 		    command_prefix='!',
 		    status=self.settings.status,
 		    platform=fortnitepy.Platform(self.settings.platform),
