@@ -81,7 +81,6 @@ class MyBot(commands.Bot):
             await asyncio.sleep(20)
 
     async def event_ready(self):
-        await web.setup()
         print(green(f'{get_time()} [{self.user.display_name}]｜ログインしました\n'))
         owner = self.get_friend(self.settings.owner)
         if owner == None:
