@@ -1,11 +1,12 @@
 # fnbot
 ***
-#install
+# install
 ```
-pip install git+https://github.com/HRTK92/fnbot-v2
+pip install git+https://github.com/HRTK92/fnbot
 ```
 
 ```py
 import fnbot
+
 fnbot.start()
 ```
