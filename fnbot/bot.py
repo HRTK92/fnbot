@@ -15,6 +15,7 @@ from .colors import blue, green, magenta, yellow, red
 from .setting import get_time
 from .setting import BotSettings
 from .client import ClientCommands
+from . import web
 
 
 
@@ -80,6 +81,7 @@ class MyBot(commands.Bot):
 			await asyncio.sleep(20)
 
 	async def event_ready(self):
+		await web.setup()
 		print(green(f'{get_time()} [{self.user.display_name}]｜ログインしました\n'))
 		owner = self.get_friend(self.settings.owner)
 
