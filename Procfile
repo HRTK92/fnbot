@@ -1,1 +1,0 @@
-fnbot: python index.py
