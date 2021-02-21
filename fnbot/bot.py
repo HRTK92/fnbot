@@ -37,7 +37,7 @@ class MyBot(commands.Bot):
                 prompt_authorization_code=True,
                 delete_existing_device_auths=True,
                 **device_auth_details))
-    self.message = f'[PartyBot] {get_time()} %s'
+        self.message = f'[PartyBot] {get_time()} %s'
 
     def get_device_auth_details(self):
         filename = 'device_auths.json'
@@ -84,7 +84,6 @@ class MyBot(commands.Bot):
         await web.setup()
         print(green(f'{get_time()} [{self.user.display_name}]｜ログインしました\n'))
         owner = self.get_friend(self.settings.owner)
-
         if owner == None:
             print(red(f'管理者とフレンドではありません'))
             await self.add_friend(self.settings.owner)
