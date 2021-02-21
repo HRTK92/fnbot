@@ -36,7 +36,7 @@ def start():
 	loop.run_until_complete(main())
 
 async def main() -> None:
-	loop = asyncio.get_event_loop()
+  loop = asyncio.get_event_loop()
   settings = fnbot.BotSettings()
   await settings.load_settings_from_file()
   client = fnbot.MyBot(settings=settings, loop=loop)
