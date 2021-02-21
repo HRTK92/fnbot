@@ -23,20 +23,20 @@ class MyBot(commands.Bot):
     def __init__(self, settings: BotSettings, loop: asyncio.AbstractEventLoop) -> None:
         self.settings = settings
         device_auth_details = self.get_device_auth_details().get(self.settings.email, {})
-    super().__init__(
-        command_prefix='!',
-        status=self.settings.status,
-        platform=fortnitepy.Platform(self.settings.platform),
-        avatar=fortnitepy.Avatar(
-            asset=self.settings.cid,
-            background_colors=fortnitepy.KairosBackgroundColorPreset.PINK.
-            value),
-        auth=fortnitepy.AdvancedAuth(
-            email=self.settings.email,
-            password=self.settings.password,
-            prompt_authorization_code=True,
-            delete_existing_device_auths=True,
-            **device_auth_details))
+        super().__init__(
+            command_prefix='!',
+            status=self.settings.status,
+            platform=fortnitepy.Platform(self.settings.platform),
+            avatar=fortnitepy.Avatar(
+                asset=self.settings.cid,
+                background_colors=fortnitepy.KairosBackgroundColorPreset.PINK.
+                value),
+            auth=fortnitepy.AdvancedAuth(
+                email=self.settings.email,
+                password=self.settings.password,
+                prompt_authorization_code=True,
+                delete_existing_device_auths=True,
+                **device_auth_details))
     self.message = f'[PartyBot] {get_time()} %s'
 
     def get_device_auth_details(self):
