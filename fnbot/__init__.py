@@ -9,4 +9,4 @@ from .setting import BotSettings
 from .bot import MyBot
 from .client import ClientCommands
 from .party import PartyCommands
-from .setup import start
+from .setup import start, main
