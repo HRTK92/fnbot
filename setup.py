@@ -13,7 +13,7 @@ setuptools.setup(
     description="You can receive the message 'Hello!!!'",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/HRTK92/fnbot-v2/",
+    url="https://github.com/HRTK92/fnbot",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
