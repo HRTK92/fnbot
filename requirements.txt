@@ -6,6 +6,5 @@ sanic
 requests
 colorama
 aiohttp
-aiofiles
 timeout_decorator
 crayons
