@@ -2,9 +2,5 @@ fortnitepy
 BenBotAsync
 FortniteAPIAsync
 pypresence
-sanic
 requests
 colorama
-aiohttp
-timeout_decorator
-crayons
