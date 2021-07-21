@@ -13,6 +13,7 @@ try:
 	import colorama
 	import aiohttp
 	import requests
+	import crayons
 except ModuleNotFoundError as e:
 	print(e, '\nモジュールの読み込みに失敗しました。')
 	sys.exit()

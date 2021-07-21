@@ -4,3 +4,4 @@ FortniteAPIAsync
 pypresence
 requests
 colorama
+crayons
